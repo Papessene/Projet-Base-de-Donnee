@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="contenaire mt-3 mb-5">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-4">
+            <h3>Créer votre compte</h3>
+            <form method="post" action="{% url 'register' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="prenom" class="form-label">Prénom</label>
+                    <input type="text" name="prenom" class="form-control" id="prenom" required>
+                </div>
+                <div class="mb-3">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" name="nom" class="form-control" id="nom" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adresse Email</label>
+                    <input type="email" name="email" class="form-control" id="email" required>
+                    <div id="emailHelp" class="form-text">Nous n'allons jamais partager votre email.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Numéro de téléphone</label>
+                    <input type="tel" name="phone" class="form-control" id="phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" name="password" class="form-control" id="password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm_password" class="form-label">Repetez le mot de passe</label>
+                    <input type="password" name="confirm_password" class="form-control" id="confirm_password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Créer votre compte</button>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <img src="https://www.saheldecouverte.com/wp-content/uploads/2024/04/sahel-decouverte-senegal-saint-louis-afrique-dakar-casamance-ziguinchor-carabane-ferry-bateau-liaison-redemarrage-aline-sitoe-diatta.jpg" alt="" class="img-fluid img-responsive">
+        </div>
+    </div>
+</div>
+{% endblock %}

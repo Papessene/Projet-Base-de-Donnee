@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-3 mb-5">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-4">
+            <h3>Passez votre Réservation</h3>
+            <form method="post" action="{% url 'reserver' %}">
+                {% csrf_token %}
+
+                <!-- Champs pour le client -->
+                <div class="mb-3">
+                    <label for="prenom" class="form-label">Prénom</label>
+                    <input type="text" name="prenom" class="form-control" id="prenom" required>
+                </div>
+                <div class="mb-3">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" name="nom" class="form-control" id="nom" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adresse Email</label>
+                    <input type="email" name="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telephone" class="form-label">Téléphone</label>
+                    <input type="text" name="telephone" class="form-control" id="telephone" required>
+                </div>
+
+                <!-- Date de réservation -->
+                <div class="mb-3">
+                    <label for="date_reservation" class="form-label">Date de Réservation</label>
+                    <input type="date" name="date_reservation" class="form-control" id="date_reservation" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Réserver</button>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <img src="https://img.freepik.com/vecteurs-premium/illustration-vectorielle-personnage-dessin-anime-graphique-reservation-billets-ligne_516790-1848.jpg" alt="" class="img-fluid img-responsive">
+        </div>
+    </div>
+</div>
+{% endblock %}

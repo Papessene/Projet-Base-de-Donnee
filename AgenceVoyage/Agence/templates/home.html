@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5 mb-5">
+    <h3 class="mb-3">Venez réserver vos hôtels chez Agence Voyage, la meilleure agence!</h3>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card shadow" style="width: 18rem;">
+                <img src="https://www.riu.com/fr/binaris/pool-riu-baobab-4_tcm57-262962.jpg?v=tm190824_1144" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Hôtel RIU Baobab</h5>
+                  <p class="card-text">L'hôtel Riu Baobab, situé au Sénégal, est un complexe touristique offrant des services de qualité, des plages magnifiques et une ambiance relaxante, idéal pour des vacances reposantes.</p>
+                  <a href="{% url 'visite' %}" class="btn btn-warning">Visiter</a>
+                  <a href="{% url 'reserver' %}" class="btn btn-success">Réserver</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card shadow" style="width: 18rem;">
+                <img src="https://www.visitezlesenegal.com/wp-content/uploads/2023/12/Sine-Saloum_edited-3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Île Sine-Saloum</h5>
+                  <p class="card-text">Cette île a toujours été une destination préservée offrant des paysages de mangroves, des plages tranquilles et une riche biodiversité, idéale pour les amateurs de nature et de culture locale.</p>
+                  <a href="{% url 'visite' %}" class="btn btn-warning">Visiter</a>
+                  <a href="{% url 'reserver' %}" class="btn btn-success">Réserver</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card shadow" style="width: 18rem;">
+                <img src="https://keursaloum.com/wp-content/uploads/2019/09/DJI_0029-2-1024x656.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Casamance</h5>
+                  <p class="card-text">La Casamance est une région préservée offrant des paysages variés, des plages magnifiques et une culture authentique, idéale pour les amateurs de nature et de tranquillité.</p>
+                  <a href="{% url 'visite' %}" class="btn btn-warning">Visiter</a>
+                  <a href="{% url 'reserver' %}" class="btn btn-success">Réserver</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

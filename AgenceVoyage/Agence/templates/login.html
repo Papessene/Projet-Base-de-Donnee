@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="contenaire mt-3 mb-5">
+    <div class="row mt-5 mb-5 shadow">
+        <div class="col-lg-6 shadow p-4">
+            <h3>Connexion</h3>
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adresse Email</label>
+                    <input type="email" name="email" class="form-control" id="email" required>
+                    <div id="emailHelp" class="form-text">Nous n'allons jamais partager votre email.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" name="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Connectez-vous</button>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <img src="https://www.goafricaonline.com/media/cache/resolve/w800/uploads/media/company_banner_mobile/0003/73/64e640212149b-CMR%20VOYAGE%20COUVERTURE%20003.jpg" alt="" class="img-fluid img-responsive">
+        </div>
+    </div>
+</div>
+{% endblock %}
